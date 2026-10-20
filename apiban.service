@@ -1,0 +1,13 @@
+[Unit]
+Description=APIban Threat Intelligence Client
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/apiban
+ExecStart=/usr/bin/python3 /opt/apiban/apiban-client.py
+Restart=always
+RestartSec=300
+
+[Install]
+WantedBy=multi-user.target
